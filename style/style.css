@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.container {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0 auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.important {
+    color: red;
+}
+  
+.todo__help {
+    color: #2C8505; outline: none; /*цвет подсказки*/
+    cursor: help; text-decoration: none; /*вид курсора при наведении, можно заменить на pointer*/
+    position: relative; /*позиция*/
+}
+      
+.todo__help img{
+    display: block;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+}
+  
+  /*положение всплывающей подсказки*/
+.todo__help span {
+    margin-left: -999em;
+    position: absolute;
+}
+      
+  /*подсказка при наведении курсора*/
+.todo__help:hover span {
+    font-family: Verdana, Tahoma, Geneva, sans-serif; /*шрифт*/
+    position: absolute; /*позиция*/
+    left: 10px;
+    top: 40px;
+    z-index: 99;
+    margin-left: 0;
+    width: 290px; /*ширина блока подсказки*/
+    font-size: 12px;
+}
+      
+  /*параметры изображения*/
+.todo__help:hover img {
+    border: 0;
+}
+      
+  /*блок всплывающей подсказки*/
+.help__airhelp {
+    background: none repeat scroll 0 0 #808080; /*цвет и прозрачность фона*/
+    /*параметры бордюра*/
+    border-radius: 5px; /*закругление углов*/
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /*тень блока*/
+    color: #fff; /*цвет шрифта всплывающей подсказки*/
+    padding: 5px; /*внутренний отступ*/
+}
+  
+.todo__logo{
+    display: block;
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.todo__app {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.todo__app-input {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    margin: 0 auto;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: inherit;
+    outline: none;
+    border-bottom: 1px solid #000;
+    width: 220px;
+    line-height: 30px;
+}
+  
+.todo__app-input::placeholder {
+    padding-left: 70px;
+    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+}
+
+.todo__app-input:focus::placeholder {
+    color: transparent;
+}
+
+.todo__app-btn {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    width: 150px;
+    margin: 20px auto;
+    transition: all .5s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.todo__app-btn:hover {
+    background-color: #808080;
+    color: whitesmoke;
+    border: 1px solid #fff;
+}
+
+.todo__app-list {
+    list-style: none;
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    padding-bottom: 20px;
+    
+}
+
+input[type="checkbox"] {
+   position: absolute;
+   margin-top: 12px;
+   cursor: pointer;
+}
+
+.todo__app-list li {
+    align-items: center;
+}
+  
+.todo__app-list li label {
+    position: relative;
+    left: 25px;
+    display: inline-block;
+    width: 200px;
+    word-wrap: break-word;
+}
